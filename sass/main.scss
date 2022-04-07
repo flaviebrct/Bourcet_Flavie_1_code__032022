@@ -1,0 +1,26 @@
+//Base
+@import "./base/base.scss";
+@import "./base/typography.scss";
+
+// Components
+/* @import "./components/buttons"; */ 
+
+// Layout
+@import "./layout/header.scss";
+@import "./layout/nav.scss";
+/* @import "./layout/container";
+@import "./layout/form"; */
+
+// Pages
+ @import "./pages/accueil.scss";
+/*@import "./page2"; */
+
+// Themes
+
+// Utils
+/* @import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions"; */
+
+// Vendors

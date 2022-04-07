@@ -1,3 +1,61 @@
+body {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 0px;
+}
 
+.logo {
+  font-family: "shrikhand";
+}
+
+* {
+  font-family: "roboto";
+}
+
+/* @import "./components/buttons"; */
+.header {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 25px -15px black;
+}
+.header--title {
+  font-size: 25px;
+  margin: 16px 0px 4px;
+}
+
+.searchBar {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 45px;
+  color: #363636;
+}
+.searchBar--input {
+  width: 32%;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.searchBar--icon {
+  width: auto;
+  font-size: 13px;
+}
+
+/* @import "./layout/container";
+@import "./layout/form"; */
+.header {
+  position: relative;
+}
+
+/*@import "./page2"; */
+/* @import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions"; */
 
 /*# sourceMappingURL=style.css.map */
