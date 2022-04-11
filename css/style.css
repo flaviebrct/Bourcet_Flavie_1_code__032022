@@ -14,7 +14,24 @@ body {
   font-family: "roboto";
 }
 
-/* @import "./components/buttons"; */
+.bold {
+  font-weight: 700;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.button {
+  width: fit-content;
+  background: #9356DC;
+  background: linear-gradient(354deg, #9356DC 0%, #9356DC 15%, #FF79DA 92%);
+  color: white;
+  border: 0px;
+  padding: 0.8rem;
+  border-radius: 20px;
+}
+
 .header {
   height: auto;
   display: flex;
@@ -50,6 +67,28 @@ body {
 @import "./layout/form"; */
 .header {
   position: relative;
+}
+
+.title {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px 44px;
+  align-items: center;
+}
+.title__font {
+  margin: 0px;
+  font-size: 20px;
+  text-align: center;
+}
+.title .thin {
+  display: block;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.button {
+  margin-top: 25px;
 }
 
 /*@import "./page2"; */

@@ -1,0 +1,9 @@
+.button {
+    width: fit-content;
+    background: $primary;
+    background: linear-gradient(354deg, $primary 0%, $primary 15%, $secondary 92%);
+    color: white;
+    border: 0px;
+    padding: 0.8rem;
+    border-radius: 20px;
+}
