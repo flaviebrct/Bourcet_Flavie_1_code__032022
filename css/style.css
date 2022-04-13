@@ -28,7 +28,7 @@ body, main {
   background: linear-gradient(354deg, #9356DC 0%, #9356DC 15%, #FF79DA 92%);
   color: white;
   border: 0px;
-  padding: 0.8rem;
+  padding: 13px 23px;
   border-radius: 20px;
 }
 
@@ -237,6 +237,69 @@ footer a {
 img {
   width: 100%;
   height: 20%;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  position: relative;
+  bottom: 50px;
+  border-radius: 35px;
+  padding: 15px 0px 80px;
+}
+.menu--title {
+  width: 95%;
+  padding: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu--title h2 {
+  margin: 0px;
+}
+.menu--title i {
+  font-size: 20px;
+}
+.menu h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 18px;
+}
+.menu--recipe {
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px 10px;
+  margin: 14px 0px;
+  line-height: 20px;
+}
+.menu--recipe p {
+  margin: 0px;
+  font-size: 13px;
+}
+.menu--recipe p :not(.bold) {
+  font-weight: 100;
+}
+.menu--recipe p.bold {
+  font-size: 15px;
+}
+.menu--price {
+  color: #363636;
+  font-weight: 700;
+}
+.menu--details {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5%;
+}
+.menu--details p:not(.menu--price) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .btn--wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 /* @import "./utils/variables";
