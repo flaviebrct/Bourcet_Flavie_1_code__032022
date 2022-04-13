@@ -6,7 +6,7 @@ body, main {
   margin: 0px;
 }
 
-.logo {
+.logo--font {
   font-family: "shrikhand";
 }
 
@@ -114,7 +114,7 @@ footer {
   display: flex;
   flex-direction: column;
 }
-footer > .logo {
+footer > .logo--font {
   color: white;
   margin: 0px;
   padding: 6% 0px 12px 5%;
@@ -227,7 +227,6 @@ footer a {
   padding-bottom: 40px;
 }
 
-/*@import "./page2"; */
 /* @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
