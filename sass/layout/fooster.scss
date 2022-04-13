@@ -1,0 +1,26 @@
+footer {
+    background-color: #363636; 
+    display: flex;
+    flex-direction: column;
+
+    >.logo {
+        color: white;
+        margin: 0px;
+        padding: 6% 0px 12px 5%;
+        font-size: 13px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0px 0px 10% 5%;
+        margin: 0px;
+        line-height: 20px;
+        font-size: 11px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+}
