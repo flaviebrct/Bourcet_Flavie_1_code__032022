@@ -1,4 +1,6 @@
-body, main {
+/* @import "./utils/functions";
+@import "./utils/extensions"; */
+body {
   box-sizing: border-box;
   width: 100%;
   max-width: 1440px;
@@ -6,7 +8,11 @@ body, main {
   margin: 0px;
 }
 
-.logo--font {
+.main__menu {
+  background-color: #F6F6F6;
+}
+
+.logo__font {
   font-family: "shrikhand";
 }
 
@@ -30,6 +36,11 @@ body, main {
   border: 0px;
   padding: 13px 23px;
   border-radius: 20px;
+  box-shadow: 0px 10px 14px -15px rgba(0, 0, 0, 0.3);
+}
+.button:hover {
+  opacity: 0.92;
+  box-shadow: 0px 10px 14px -5px rgba(0, 0, 0, 0.3);
 }
 
 .card {
@@ -39,7 +50,7 @@ body, main {
   background-color: white;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 0 25px -20px black;
+  box-shadow: 0px 10px 14px -15px rgba(0, 0, 0, 0.3);
 }
 .card img {
   width: 100%;
@@ -51,7 +62,7 @@ body, main {
   text-decoration: none;
   color: black;
 }
-.card--caption {
+.card__caption {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,33 +70,34 @@ body, main {
   margin: auto;
   padding-top: 8px;
 }
-.card--text > h4 {
+.card__text > h4 {
   margin: 0px;
   font-weight: 500;
   font-size: 15px;
 }
-.card--text p {
+.card__text p {
   margin: 0px;
   font-weight: 300;
   font-size: 14px;
   padding-top: 3px;
 }
-.card--icon {
+.card__icon {
   padding-right: 9px;
   font-size: 20px;
 }
-.card--icon .heart--full::before {
+.card__icon .heart__full::before {
   display: none;
 }
 
-.header {
+header {
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 25px -15px black;
+  box-shadow: 0px 10px 14px -15px rgba(0, 0, 0, 0.3);
 }
-.header--title {
+
+.header__title {
   font-size: 25px;
   margin: 16px 0px 4px;
 }
@@ -98,14 +110,15 @@ body, main {
   gap: 10px;
   height: 45px;
   color: #363636;
+  margin: auto;
 }
-.searchBar--input {
+.searchBar__input {
   width: 32%;
   border: none;
   background-color: transparent;
   padding: 0;
 }
-.searchBar--icon {
+.searchBar__icon {
   width: auto;
   font-size: 13px;
 }
@@ -115,7 +128,7 @@ footer {
   display: flex;
   flex-direction: column;
 }
-footer > .logo--font {
+footer > .logo__font {
   color: white;
   margin: 0px;
   padding: 6% 0px 12px 5%;
@@ -135,7 +148,7 @@ footer a {
 
 /* @import "./layout/container";
 @import "./layout/form"; */
-.header {
+header {
   position: relative;
 }
 
@@ -189,7 +202,7 @@ footer a {
   left: 15px;
   font-size: 12px;
 }
-.functionning .step--block {
+.functionning .step__block {
   display: flex;
   align-items: center;
   background-color: #F6F6F6;
@@ -201,13 +214,13 @@ footer a {
   gap: 20px;
   box-shadow: 0px 10px 14px -15px rgba(0, 0, 0, 0.3);
 }
-.functionning .step--block > i {
+.functionning .step__block > i {
   color: #363636;
 }
-.functionning .step--block:hover {
+.functionning .step__block:hover {
   background-color: #f5edff;
 }
-.functionning .step--block:hover > i {
+.functionning .step__block:hover > i {
   color: #9356DC;
 }
 
@@ -228,10 +241,19 @@ footer a {
   padding-bottom: 40px;
 }
 
-.header i {
-  margin: 16px 0px 4px;
-  position: relative;
-  right: 20%;
+.header {
+  width: 100%;
+  display: flex;
+}
+.header h1 {
+  margin: 0px;
+  flex-grow: 2;
+  justify-content: center;
+}
+.header a {
+  text-decoration: none;
+  color: #363636;
+  flex-grow: 1.5;
 }
 
 img {
@@ -243,20 +265,20 @@ img {
   background-color: #F6F6F6;
   position: relative;
   bottom: 50px;
-  border-radius: 35px;
-  padding: 15px 0px 80px;
+  border-radius: 35px 35px 0px 0px;
+  padding: 15px;
 }
-.menu--title {
+.menu__title {
   width: 95%;
   padding: 15px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.menu--title h2 {
+.menu__title h2 {
   margin: 0px;
 }
-.menu--title i {
+.menu__title i {
   font-size: 20px;
 }
 .menu h3 {
@@ -266,45 +288,41 @@ img {
   margin-top: 30px;
   margin-bottom: 18px;
 }
-.menu--recipe {
+.menu__recipe {
   background-color: white;
   border-radius: 10px;
   padding: 12px 10px;
   margin: 14px 0px;
   line-height: 20px;
+  box-shadow: 0px 10px 14px -15px rgba(0, 0, 0, 0.3);
 }
-.menu--recipe p {
+.menu__recipe p {
   margin: 0px;
   font-size: 13px;
 }
-.menu--recipe p :not(.bold) {
+.menu__recipe p :not(.bold) {
   font-weight: 100;
 }
-.menu--recipe p.bold {
+.menu__recipe p.bold {
   font-size: 15px;
 }
-.menu--price {
+.menu__price {
   color: #363636;
   font-weight: 700;
 }
-.menu--details {
+.menu__details {
   display: flex;
   justify-content: space-between;
   padding-right: 5%;
 }
-.menu--details p:not(.menu--price) {
+.menu__details p:not(.menu__price) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .btn--wrapper {
+.menu .btn__wrapper {
   display: flex;
   justify-content: center;
 }
-
-/* @import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions"; */
 
 /*# sourceMappingURL=style.css.map */

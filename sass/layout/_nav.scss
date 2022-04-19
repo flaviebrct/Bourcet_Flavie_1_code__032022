@@ -6,8 +6,9 @@
     gap: 10px;
     height: 45px;
     color: #363636;
+    margin: auto;
 
-    &--input {
+    &__input {
         width: 32%;
         border: none;
         background-color: transparent;
@@ -15,7 +16,7 @@
         
     }
 
-    &--icon {
+    &__icon {
         width: auto;
         font-size: 13px;
     }
