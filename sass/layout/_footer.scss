@@ -7,7 +7,7 @@ footer {
         color: white;
         margin: 0px;
         padding: 6% 0px 12px 5%;
-        font-size: 13px;
+        font-size: 100%;
     }
 
     ul {
@@ -15,12 +15,45 @@ footer {
         padding: 0px 0px 10% 5%;
         margin: 0px;
         line-height: 20px;
-        font-size: 11px;
+        font-size: 90%;
     }
 
     a {
         text-decoration: none;
         color: white;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    footer {
+        flex-direction: column-reverse;
+        padding: 50px 10px;
+        
+
+        .logo__font {
+            padding: 0px;
+            margin: auto;
+            font-size: 35px;
+            padding-top: 60px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 25px;
+            padding: 0px;
+            max-width: 1440px;
+            margin: auto;
+
+            li {
+                margin: 0 50px;
+            }
+
+        }
+
     }
 
 }
