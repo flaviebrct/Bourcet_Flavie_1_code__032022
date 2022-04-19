@@ -19,6 +19,7 @@
     }
 }
 
+
 img {
     width: 100%;
     height: 20%;
@@ -101,6 +102,38 @@ img {
     .btn__wrapper {
         display: flex;
         justify-content: center;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    img {
+        height: 300px;
+        object-fit: cover;
+        object-position: 0 50%;
+    }
+
+    .menu {
+        position: unset;
+        max-width: 1440px;
+        margin: auto;
+        
+        &__step {
+            display: flex;
+            justify-content: space-around;
+
+            &--starter, &--dish, &--dessert {
+                height: 100%;
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+        .button {
+            margin: 25px;
+            width: 30%;
+        }
     }
 
 }
