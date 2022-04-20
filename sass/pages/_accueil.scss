@@ -102,11 +102,39 @@ header {
     } 
 }
 
+@media screen and (min-width: 700px) {
+
+    #restaurants {
+
+    
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            width: auto;
+            /* height: 40rem; */
+            max-width: 1440px;
+            margin: auto;
+
+            .card {
+                width: 45%;
+            }
+        } 
+
+    }
+}
+
+
 @media screen and (min-width: 1024px) {
+
+    .title {
+        padding: 50px 30px;
+    }
     .functionning {
         flex-direction: row;
         align-items: center;
-        padding: 40px 20px;
+        padding: 50px 20px;
         max-width: 1440px;
         margin: auto;
 
@@ -117,41 +145,41 @@ header {
     } 
 
     #restaurants {
-        padding: 10px 20px 70px;
+        padding: 23px;
 
 
         >h3 {
             padding: 15px;
             font-size: 30px;
-            max-width: 1440px;
+            max-width: 1400px;
             margin: auto;
         }
 
         .wrapper {
             flex-flow: row wrap;
             width: auto;
-            height: 40rem;
+            /* height: 40rem; */
             max-width: 1440px;
             margin: auto;            
 
             .card {
-                width: 48%;
-                height: 48%;
+                width: 23%;
+                /* height: 48%; */
                 margin: 1%;
 
                 &__text {
 
                     >h4 {
-                    font-size: 28px;
+                    /* font-size: 28px; */
                     }
 
                     p {
-                        font-size: 26px;
+                    /* font-size: 26px; */
                     }
                 }
 
                 &__icon {
-                    font-size: 40px;
+                    /* font-size: 40px; */
                 }
             }
         }

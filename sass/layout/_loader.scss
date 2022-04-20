@@ -1,0 +1,53 @@
+.loader__container {
+    background: rgb(147,86,220);
+    background: linear-gradient(349deg, rgba(147,86,220,1) 0%, rgba(147,86,220,1) 14%, rgba(255,121,218,1) 92%);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    display: none;
+
+    .logo__font {
+        color: white;
+        font-size: 47px;
+        font-weight: 500;
+    }
+
+    .loading {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .line__box {
+            padding: 2px;
+            width: 40%;
+            height: 20px;
+            border: transparent;
+            border-radius: 20px;
+
+            .line {
+                height: 20px;
+                border-radius: 20px;
+                background: white;
+                animation: loading 2s forwards cubic-bezier(0,0,0,0);
+            }
+        }
+
+    }
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
