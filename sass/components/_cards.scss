@@ -5,6 +5,7 @@
     background-color: white;
     overflow: hidden;
     border-radius: 12px;
+    position: relative;
     @include shadow;
 
     img {
@@ -50,12 +51,26 @@
 
         .heart{
 
-             &__full::before {
-                display: none;
+             &__full{
+                background: linear-gradient(349deg, rgba(147, 86, 220, 1) 0%, rgba(147, 86, 220, 1) 14%, rgba(255, 121, 218, 1) 92%);
+                background-clip: text;
+                color: transparent;
             }
 
         }
 
+    }
+
+    .new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $tertiary;
+        border-radius: 2px;
+        padding: 5px 8px;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.509);
+        @include shadow;
     }
 
 }

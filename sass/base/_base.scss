@@ -3,6 +3,7 @@ body {
     width: 100%;
     min-width: 320px;
     margin: 0px;
+    z-index: 1;
 }
 .main {
     &__menu {
