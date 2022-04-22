@@ -10,7 +10,7 @@
     text-shadow: 0 0 7px #F6F6F6;
   }
   80% {
-    color: white;
+    color: #F6F6F6;
     text-shadow: none;
   }
   95% {
@@ -73,6 +73,11 @@ body {
   border-radius: 12px;
   position: relative;
   box-shadow: 0px 10px 14px -15px rgba(0, 0, 0, 0.3);
+  transition: 500ms;
+}
+.card:hover {
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.355);
+  cursor: pointer;
 }
 .card img {
   width: 100%;
@@ -106,12 +111,28 @@ body {
 .card__icon {
   padding-right: 9px;
   font-size: 20px;
+  position: relative;
 }
 .card__icon .heart__full {
   background: linear-gradient(349deg, rgb(147, 86, 220) 0%, rgb(147, 86, 220) 14%, rgb(255, 121, 218) 92%);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0s;
+}
+.card__icon:hover .heart {
+  opacity: 0;
+}
+.card__icon:hover .heart__full {
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 .card .new {
   position: absolute;
@@ -278,14 +299,6 @@ footer a {
 
 .letter:nth-child(8) {
   animation-delay: 0.8s;
-}
-
-.letter:nth-child(9) {
-  animation-delay: 0.9s;
-}
-
-.letter:nth-child(10) {
-  animation-delay: 1s;
 }
 
 /* @import "./layout/form"; */
