@@ -5,20 +5,8 @@
     }
 }
 
-@keyframes flash {
-    0% {
-        color: $background;
-        text-shadow: 0 0 7px $background;
+@keyframes spinner {
+    to {
+        transform: rotate(1turn);
     }
-
-    80% {
-        color: $background;
-        text-shadow: none;
-    }
-
-    95% {
-        color: $background;
-        text-shadow: 0 0 7px $background;
-    }
-
 }

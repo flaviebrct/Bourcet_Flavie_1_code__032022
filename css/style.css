@@ -4,18 +4,9 @@
     z-index: -1;
   }
 }
-@keyframes flash {
-  0% {
-    color: #F6F6F6;
-    text-shadow: 0 0 7px #F6F6F6;
-  }
-  80% {
-    color: #F6F6F6;
-    text-shadow: none;
-  }
-  95% {
-    color: #F6F6F6;
-    text-shadow: 0 0 7px #F6F6F6;
+@keyframes spinner {
+  to {
+    transform: rotate(1turn);
   }
 }
 /* @import "./utils/extensions"; */
@@ -252,7 +243,7 @@ footer a {
   height: 100%;
   background: rgb(147, 86, 220);
   background: linear-gradient(349deg, rgb(147, 86, 220) 0%, rgb(147, 86, 220) 14%, rgb(255, 121, 218) 92%);
-  opacity: 85%;
+  opacity: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,40 +256,18 @@ footer a {
   color: white;
   font-size: 47px;
   font-weight: 500;
-  letter-spacing: 3px;
-  animation: flash 1.2s linear infinite;
 }
 
-.letter:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.letter:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.letter:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.letter:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.letter:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.letter:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-.letter:nth-child(7) {
-  animation-delay: 0.7s;
-}
-
-.letter:nth-child(8) {
-  animation-delay: 0.8s;
+.spinner::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 10px solid rgba(255, 255, 255, 0.855);
+  border-top: 10px solid #99E2D0;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  animation: spinner 1.2s infinite ease;
 }
 
 /* @import "./layout/form"; */
