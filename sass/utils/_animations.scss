@@ -10,3 +10,14 @@
         transform: rotate(1turn);
     }
 }
+
+@keyframes fade {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}

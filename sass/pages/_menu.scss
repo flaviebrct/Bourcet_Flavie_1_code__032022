@@ -7,9 +7,9 @@
         justify-content: center;
     }
 
-    a { 
+    a {
         text-decoration: none;
-        color: #363636;  
+        color: #363636;
         position: absolute;
         left: 1%;
     }
@@ -54,26 +54,61 @@ img {
     }
 
     &__recipe {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         background-color: white;
         border-radius: 10px;
-        padding: 12px 10px;
+        overflow: hidden;
+
         margin: 14px 0px;
         line-height: 20px;
+
         @include shadow;
+
+        
+
+        &--container {
+            padding: 12px 10px;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            overflow: hidden;
+        }
 
         p {
             margin: 0px;
-            font-size: 13px;
+            font-size: 12px;
 
             :not(.bold) {
                 font-weight: 100;
             }
 
             &.bold {
-                font-size: 15px;
-
+                font-size: 14px;
             }
 
+        }
+
+        .checked {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: $tertiary;
+            width: 70px;
+            height: 65px;
+            font-size: 20px;
+            margin-right: -13rem;
+            transition: margin 0.5s;
+
+            i {
+                transform: rotate(90deg);
+                transition: transform 0.5s;
+                transition-delay: 0.2s;
+            }
+           
         }
 
     }
@@ -85,14 +120,16 @@ img {
 
     &__details {
         display: flex;
-        justify-content: space-between;
-        padding-right: 5%;
+       
+        flex-direction: column;
+        overflow: hidden;
+        
 
-        p:not(.menu__price) {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+        .description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;}
+    
     }
 
     .btn__wrapper {
@@ -102,6 +139,38 @@ img {
 
 }
 
+/* --- animations --- */
+
+.menu__recipe {
+    animation: fade 2s 1 forwards;
+    opacity: 0%;
+}
+
+.menu__recipe:nth-of-type(1) {
+    animation-delay: 0.5s;
+}
+
+.menu__recipe:nth-of-type(2) {
+    animation-delay: 0.7s;
+}
+
+.menu__recipe:nth-of-type(3) {
+    animation-delay: 0.9s;
+}
+
+.menu__recipe:hover .checked {
+    margin-right: 0px;
+
+    i {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+
+
+/* --- media queries --- */
 @media screen and (min-width: 1024px) {
 
     img {
@@ -114,14 +183,16 @@ img {
         position: unset;
         max-width: 1440px;
         margin: auto;
-        
+
         &__step {
             display: flex;
             justify-content: space-around;
 
-            &--starter, &--dish, &--dessert {
+            &--starter,
+            &--dish,
+            &--dessert {
                 height: 100%;
-                width: 100%;
+                width: 450px;
                 padding: 10px;
             }
         }

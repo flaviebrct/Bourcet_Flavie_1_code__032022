@@ -9,6 +9,15 @@
     transform: rotate(1turn);
   }
 }
+@keyframes fade {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
 /* @import "./utils/extensions"; */
 body {
   box-sizing: border-box;
@@ -247,9 +256,7 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loader 0.5s;
-  animation-delay: 2.5s;
-  animation-fill-mode: both;
+  animation: loader 0.5s 2.5s both;
   z-index: 50;
 }
 .loader__container .letter {
@@ -474,22 +481,50 @@ img {
   margin-bottom: 18px;
 }
 .menu__recipe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: white;
   border-radius: 10px;
-  padding: 12px 10px;
+  overflow: hidden;
   margin: 14px 0px;
   line-height: 20px;
   box-shadow: 0px 10px 14px -15px rgba(0, 0, 0, 0.3);
 }
+.menu__recipe--container {
+  padding: 12px 10px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  overflow: hidden;
+}
 .menu__recipe p {
   margin: 0px;
-  font-size: 13px;
+  font-size: 12px;
 }
 .menu__recipe p :not(.bold) {
   font-weight: 100;
 }
 .menu__recipe p.bold {
-  font-size: 15px;
+  font-size: 14px;
+}
+.menu__recipe .checked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #99E2D0;
+  width: 70px;
+  height: 65px;
+  font-size: 20px;
+  margin-right: -13rem;
+  transition: margin 0.5s;
+}
+.menu__recipe .checked i {
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+  transition-delay: 0.2s;
 }
 .menu__price {
   color: #363636;
@@ -497,10 +532,10 @@ img {
 }
 .menu__details {
   display: flex;
-  justify-content: space-between;
-  padding-right: 5%;
+  flex-direction: column;
+  overflow: hidden;
 }
-.menu__details p:not(.menu__price) {
+.menu__details .description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -510,6 +545,32 @@ img {
   justify-content: center;
 }
 
+/* --- animations --- */
+.menu__recipe {
+  animation: fade 2s 1 forwards;
+  opacity: 0%;
+}
+
+.menu__recipe:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.menu__recipe:nth-of-type(2) {
+  animation-delay: 0.7s;
+}
+
+.menu__recipe:nth-of-type(3) {
+  animation-delay: 0.9s;
+}
+
+.menu__recipe:hover .checked {
+  margin-right: 0px;
+}
+.menu__recipe:hover .checked i {
+  transform: rotate(360deg);
+}
+
+/* --- media queries --- */
 @media screen and (min-width: 1024px) {
   img {
     height: 300px;
@@ -528,7 +589,7 @@ img {
   }
   .menu__step--starter, .menu__step--dish, .menu__step--dessert {
     height: 100%;
-    width: 100%;
+    width: 450px;
     padding: 10px;
   }
   .menu .button {

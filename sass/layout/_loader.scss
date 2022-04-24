@@ -17,9 +17,7 @@
     justify-content: center;
     align-items: center;
 
-    animation: loader 0.5s;
-    animation-delay: 2.5s;
-    animation-fill-mode: both;
+    animation: loader 0.5s 2.5s both;
     z-index: 50;
 
     .letter {
