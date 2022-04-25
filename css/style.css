@@ -480,6 +480,14 @@ img {
   margin-top: 30px;
   margin-bottom: 18px;
 }
+.menu h3::after {
+  content: "";
+  display: block;
+  background-color: #99E2D0;
+  width: 30px;
+  height: 3px;
+  margin-top: 5px;
+}
 .menu__recipe {
   display: flex;
   align-items: center;
@@ -587,7 +595,7 @@ img {
     display: flex;
     justify-content: space-around;
   }
-  .menu__step--starter, .menu__step--dish, .menu__step--dessert {
+  .menu__step--category {
     height: 100%;
     width: 450px;
     padding: 10px;

@@ -51,6 +51,15 @@ img {
         font-size: 14px;
         margin-top: 30px;
         margin-bottom: 18px;
+
+        &::after {
+            content: "";
+            display: block;
+            background-color: $tertiary;
+            width: 30px;
+            height: 3px;
+            margin-top: 5px;
+        }
     }
 
     &__recipe {
@@ -188,9 +197,7 @@ img {
             display: flex;
             justify-content: space-around;
 
-            &--starter,
-            &--dish,
-            &--dessert {
+            &--category{
                 height: 100%;
                 width: 450px;
                 padding: 10px;
