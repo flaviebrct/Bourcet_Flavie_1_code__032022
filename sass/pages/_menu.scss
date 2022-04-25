@@ -84,6 +84,7 @@ img {
             align-items: flex-end;
             justify-content: space-between;
             overflow: hidden;
+            cursor: pointer;
         }
 
         p {
@@ -199,8 +200,11 @@ img {
 
             &--category{
                 height: 100%;
-                width: 450px;
+                width: 100%;
                 padding: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
 

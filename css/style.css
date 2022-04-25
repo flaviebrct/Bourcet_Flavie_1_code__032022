@@ -118,6 +118,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
@@ -132,7 +133,7 @@ body {
 }
 .card__icon:hover .heart__full {
   opacity: 1;
-  transition: opacity 0.5s;
+  transition: opacity 1.3s;
 }
 .card .new {
   position: absolute;
@@ -349,6 +350,7 @@ header {
 }
 .functionning .step__block:hover {
   background-color: #f5edff;
+  cursor: pointer;
 }
 .functionning .step__block:hover > i {
   color: #9356DC;
@@ -377,8 +379,8 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     width: auto;
-    /* height: 40rem; */
     max-width: 1440px;
     margin: auto;
   }
@@ -422,15 +424,6 @@ header {
     width: 23%;
     /* height: 48%; */
     margin: 1%;
-  }
-  #restaurants .wrapper .card__text > h4 {
-    /* font-size: 28px; */
-  }
-  #restaurants .wrapper .card__text p {
-    /* font-size: 26px; */
-  }
-  #restaurants .wrapper .card__icon {
-    /* font-size: 40px; */
   }
 }
 .header {
@@ -506,6 +499,7 @@ img {
   align-items: flex-end;
   justify-content: space-between;
   overflow: hidden;
+  cursor: pointer;
 }
 .menu__recipe p {
   margin: 0px;
@@ -597,8 +591,11 @@ img {
   }
   .menu__step--category {
     height: 100%;
-    width: 450px;
+    width: 100%;
     padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .menu .button {
     margin: 25px;

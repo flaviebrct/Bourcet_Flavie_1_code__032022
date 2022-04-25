@@ -65,6 +65,7 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
+                cursor: pointer;
 
                 position: absolute;
                 top: 0;
@@ -83,7 +84,7 @@
 
             &__full {
                 opacity: 1;
-                transition: opacity 0.5s;
+                transition: opacity 1.3s;
             }
         }
     }
