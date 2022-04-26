@@ -18,7 +18,6 @@
     opacity: 100%;
   }
 }
-/* @import "./utils/extensions"; */
 body {
   box-sizing: border-box;
   width: 100%;
@@ -278,7 +277,6 @@ footer a {
   animation: spinner 1.2s infinite ease;
 }
 
-/* @import "./layout/form"; */
 header {
   position: relative;
 }
@@ -416,13 +414,11 @@ header {
   #restaurants .wrapper {
     flex-flow: row wrap;
     width: auto;
-    /* height: 40rem; */
     max-width: 1440px;
     margin: auto;
   }
   #restaurants .wrapper .card {
     width: 23%;
-    /* height: 48%; */
     margin: 1%;
   }
 }

@@ -1,6 +1,4 @@
-header {
-    position: relative;
-}
+header { position: relative; }
 
 .title {
     background-color: $background;
@@ -13,19 +11,16 @@ header {
         margin: 0px;
         font-size: 20px;
         text-align: center;
-
     }
 
     .thin {
         display: block;
         font-size: 14px;
         margin-top: 12px;
-        }
+    }
 }
 
-.button {
-    margin-top: 25px;
-}
+.button { margin-top: 25px; }
 
 .functionning {
     display: flex;
@@ -78,9 +73,7 @@ header {
             background-color: #f5edff;
             cursor: pointer;
 
-            >i{
-                color: $primary;
-            }
+            >i{ color: $primary; }
         }
     }
 }
@@ -104,10 +97,7 @@ header {
 }
 
 @media screen and (min-width: 700px) {
-
     #restaurants {
-
-    
         .wrapper {
             display: flex;
             flex-direction: row;
@@ -122,16 +112,14 @@ header {
                 width: 45%;
             }
         } 
-
     }
 }
 
 
 @media screen and (min-width: 1024px) {
 
-    .title {
-        padding: 50px 30px;
-    }
+    .title { padding: 50px 30px; }
+    
     .functionning {
         flex-direction: row;
         align-items: center;
@@ -139,15 +127,11 @@ header {
         max-width: 1440px;
         margin: auto;
 
-        .step {
-            width: 33%;
-
-        }
+        .step { width: 33%; }
     } 
 
     #restaurants {
         padding: 23px;
-
 
         >h3 {
             padding: 15px;
@@ -159,13 +143,11 @@ header {
         .wrapper {
             flex-flow: row wrap;
             width: auto;
-            /* height: 40rem; */
             max-width: 1440px;
             margin: auto;            
 
             .card {
                 width: 23%;
-                /* height: 48%; */
                 margin: 1%;
             }
         }

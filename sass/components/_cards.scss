@@ -36,7 +36,6 @@
     }
 
     &__text {
-
         >h4 {
             margin: 0px;
             font-weight: 500;
@@ -52,21 +51,17 @@
     }
 
     &__icon {
-
         padding-right: 9px;
         font-size: 20px;
         position: relative;
 
         .heart {
-
-
             &__full {
                 background: linear-gradient(349deg, rgba(147, 86, 220, 1) 0%, rgba(147, 86, 220, 1) 14%, rgba(255, 121, 218, 1) 92%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
                 cursor: pointer;
-
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -76,7 +71,6 @@
                 opacity: 0;
                 transition: opacity 0s;
             }
-
         }
 
         &:hover .heart {
